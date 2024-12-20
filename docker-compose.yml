@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  winad-app:
+    container_name: winad-app
+    hostname: winad-app
+    #image: winad:v0.1
+    image: winad.slim:latest
+    restart: always
+    ports:
+      - "5000:5000"
+    tty: true
+    stdin_open: true
+    #command: bash
+
+  winad-redis:
+    container_name: winad-redis
+    hostname: winad-redis
+    image: redis
+    restart: always
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    tty: true
+    stdin_open: true
+    entrypoint:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf

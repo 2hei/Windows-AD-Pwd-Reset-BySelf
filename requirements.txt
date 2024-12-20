@@ -1,0 +1,4 @@
+Flask
+ldap3
+redis
+flask-mail

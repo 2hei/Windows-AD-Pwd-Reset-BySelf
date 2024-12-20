@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重置密码</title>
+</head>
+<body>
+    <h1>重置密码</h1>
+    <form method="POST">
+        <label for="email">邮箱:</label>
+        <input type="email" id="email" name="email" size="36" maxlength="40" required placeholder="xxx@domain.com，请输入完整邮箱地址">
+        <button type="submit">发邮件</button>
+    </form>
+    <p><p>
+    <div style="font-size: 12px;">
+        <p>
+        密码找回说明：
+        <ul>
+        <li>输入您工作邮箱地址，稍后会发送重置密码的链接到您邮箱中;</li>
+        <li>收到邮件后，请按照链接页面的提示进行密码重置;</li>
+        <li>重置操作成功后，重置链接会立即失效；</li>
+        <li>重置链接有效期60分钟。</li>
+        </ul>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
