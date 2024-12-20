@@ -35,12 +35,12 @@ winad-redis   redis               "redis-server /usr/l…"   winad-redis   About
 
 ## Visual Result
 The interface and template are very simple and do not have any beautiful CSS styles.
-Input email
+### Input email
 <img src="./img/reset-ad-01.jpg">
-Send email
+### Send email
 <img src="./img/reset-ad-02.jpg">
-Copy reset link
+### Copy reset link
 <img src="./img/reset-ad-03.jpg">
-Input new password
+### Input new password
 <img src="./img/reset-ad-04.jpg">
 
